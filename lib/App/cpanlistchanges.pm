@@ -2,7 +2,7 @@ package App::cpanlistchanges;
 
 use strict;
 use 5.008_001;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use Algorithm::Diff;
 use CPAN::DistnameInfo;
@@ -52,6 +52,7 @@ sub show_changes {
     my($from, $to);
     if ($mod =~ s/\@\{?(.+)\}?$//) {
         ($from, $to) = split /\.\./, $1;
+        $to = undef if $to eq 'HEAD';
     }
 
     my $dist = try { YAML::Load( $self->get("http://cpanmetadb.appspot.com/v1.0/package/$mod") ) };
