@@ -1,0 +1,34 @@
+---
+abstract: ~
+author:
+  - 'Tatsuhiko Miyagawa <miyagawa@bulknews.net>'
+build_requires:
+  ExtUtils::MakeMaker: 6.42
+  Test::More: 0.88
+  Test::Requires: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.42
+distribution_type: module
+generated_by: 'Module::Install version 1.00'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: cpan-listchanges
+no_index:
+  directory:
+    - inc
+    - t
+    - xt
+requires:
+  Algorithm::Diff: 0
+  CPAN::DistnameInfo: 0
+  LWP: 0
+  Module::Metadata: 0
+  Try::Tiny: 0
+  YAML: 0
+  perl: 5.8.1
+resources:
+  license: http://dev.perl.org/licenses/
+  repository: git://github.com/miyagawa/cpan-listchanges.git
+version: 0.01
