@@ -2,7 +2,7 @@ package App::cpanlistchanges;
 
 use strict;
 use 5.008_001;
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use Algorithm::Diff;
 use CPAN::DistnameInfo;
@@ -118,11 +118,11 @@ sub show_changes {
         }
 
         if ($result) {
-            print "=== Changes between $meta->{version} and $info->{version} for $info->{dist}\n\n";
+            print "=== Changes between $from and $to for $info->{dist}\n\n";
             print $result;
             print "\n";
         } else {
-            warn "Couldn't find changes between $meta->{version} and $info->{version} for $info->{dist}\n";
+            warn "Couldn't find changes between $from and $to for $info->{dist}\n";
         }
     } else {
         warn "Couldn't find $info->{dist} on CPAN.\n";
